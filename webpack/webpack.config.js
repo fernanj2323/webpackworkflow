@@ -11,19 +11,42 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.(sa|sc|c)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader'
+                    'css-loader',
+                    'sass-loader'
 
                 ]
+            },
+            {
+                test: /\.(jpg|png|gif)$/,
+                use: [
+                      {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'static/',
+                            useRelativePath: true
+                        }
+
+                      }
+                    ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-           
-            template: './src/index.handlebars'
+            title: 'My Cool Website',
+            template: './src/index.handlebars',
+            minify: {
+                html5: true,
+                collapseWhitespace: true,
+                caseSensitive: true,
+                removeComments: true,
+                removeEmptyElements: true
+            }
+        
           
         }), 
         new MiniCssExtractPlugin({

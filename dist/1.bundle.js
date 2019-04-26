@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{2:function(o,p,n){o.exports=n.p+"static/logo.jpg"}}]);
