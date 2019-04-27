@@ -1,0 +1,5 @@
+aqui van las rutas que nos van a permitir agregar y editar 
+usuarios notas.
+
+por ejemplo  
+si es metodo post, get, delete, add y en base a eso se ejecuta las acicones. 

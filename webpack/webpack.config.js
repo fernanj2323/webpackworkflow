@@ -8,19 +8,28 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js'
     },
-    module: {
+  //este objeto tiene una propiedad llamada rules 
+    // rules es un arreglo que esta compuesto por varios objetos 
+    //cada objeto son ordenes para webpack 
+    //usa babel loader, para convertir mas tipos de archivos 
+    //va a convertir todos los archivos que terminen en .js
+    //y que no tome los que estan en la carpeta node_modules ya que ahi dentro estan los archivos para que node pueda funcionar. 
+ 
+
+    module: {  //aqui configuramos los tipos de archivos que se quieren cargar 
         rules: [
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader'
+                    'css-loader',   // necesario para agregar archivos css
+                    'sass-loader'  // necesario para agregar archivos css
 
                 ]
             },
             {
-                test: /\.(jpg|png|gif)$/,
+                test: [/\.(jpg|png|gif)$/,
+                        /\.js$/]
                 use: [
                       {
                         loader: 'file-loader',

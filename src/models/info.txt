@@ -1,0 +1,2 @@
+a	en esta carpeta va la parte interna de los componentes de
+nuestra aplicacion, hasta ahorta esta la estructura para agregar tareas y usuarios 
