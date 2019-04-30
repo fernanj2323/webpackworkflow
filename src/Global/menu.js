@@ -1,15 +1,16 @@
+
 export default [ 
 {
 	title: 'Home',
 	url: '/'
 }, 
 {
-	title: 'Task',
-	url: '/task',
+	title: 'Blog',
+	url: '/blog',
 },
 {
- 	title: 'User',
- 	url: '/User'
+ 	title: 'About Us',
+ 	url: '/about'
 },
 {
 	title: 'Contact Us', 

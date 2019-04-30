@@ -35,6 +35,7 @@ app.use(express.json());
 /*app.use('/api/users' ,require('./routes/user.routes'));*/
 app.use('/api/tasks' ,require('./routes/task.routes'));
 
+
 //statics files
 //con la funcion path, unimos dirname con la carpeta public
 // de esta forma encontramos la ruta hasta public
