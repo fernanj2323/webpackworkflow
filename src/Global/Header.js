@@ -1,3 +1,4 @@
+    
 // Dependencies 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; //es una validacion que nos ayuda a definir que propiedades debemos recibir
@@ -12,13 +13,7 @@ import { Link } from 'react-router-dom'; //con esto podemos impolementar el comp
 
 class Header extends Component {
 
-/*  static propTypes = { 
-    title:  PropTypes.string.isRequired,  //explicamos que el titulo es un valor requerido de tipo string. 
-    items:  PropTypes.array.isRequired   //explicamos que el items es un valor requerido de tipo array.
 
-
-  };
-*/
   render() {
 
      
@@ -28,39 +23,60 @@ class Header extends Component {
 
 
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">{ title }</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link">
 
+         <Link to="/">Home</Link>
+        
+         <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" >
+        
+        <Link to="/Blog">Blog</Link>
 
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+        
+        <Link to="/About">About Us</Link>
 
+        </a>
+      </li>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div>
-     <a class="navbar-brand" href="#">{ title }</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-           </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home 
-                                      <span class="sr-only">
-                                      (current)
-                                      </span>
-                    </a>
-                  </li>
-              </ul>
-          </div>
-
-              <li className="Menu"> 
-               {
-                 items && items.map
-               (
-                 (item, key) => <li key={key}><Link class="text-Black" to={item.url}>{item.title}</Link></li>
-
-                )
-              } 
-            </li> 
+       <li class="nav-item">
+        <a class="nav-link" href="#">
+        
+         <Link to="/Contact">Contact Us  </Link>
+        
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
   </div>
+
+
+
+
+
+
 </nav>
     );
   }

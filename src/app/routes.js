@@ -1,6 +1,7 @@
 // Dependencies 
 import React from 'react';
-import { Route, Switch} from 'react-router-dom'; 
+import ReactDOM from 'react-dom';
+import { Route, Switch, BrowserRouter} from 'react-router-dom'; 
 
 //componentes 
 import App from './App';
